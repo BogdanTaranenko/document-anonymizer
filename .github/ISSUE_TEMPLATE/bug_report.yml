@@ -1,0 +1,44 @@
+name: Bug report
+description: A document that came back wrong, or an error you did not expect
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please do not attach a real document.** Describe its shape instead, or
+        strip it down to a synthetic file that still reproduces the problem.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: document
+    attributes:
+      label: The document
+      description: |
+        Which of these were in it — comments, tracked insertions/deletions,
+        formatting changes, a people registry, embedded objects? Which Word
+        version produced it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Options used
+      description: Replacement name, scope (all / comments only), numbering, clear properties.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: How you ran it
+      placeholder: hosted instance / local `python app.py` / imported as a library
+    validations:
+      required: true
