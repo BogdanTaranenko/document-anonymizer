@@ -26,6 +26,9 @@ exclude_lines = [
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+# Code blocks in the README are laid out for reading, not for the formatter.
+# Leave prose alone.
+extend-exclude = ["*.md"]
 
 [tool.ruff.lint]
 select = [
